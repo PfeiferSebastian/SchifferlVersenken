@@ -12,20 +12,29 @@ namespace SchifferlVersenken
         #region Methoden
 
         //Für Methoden im Spiel
+        public void SpielfeldInitialisieren_P1(string[,,] a)
+        {
 
-        public void platzierung_p1()
+        }
+
+        public void SpielfeldInitialisieren_P2(string[,,] a)
+        {
+
+        }
+
+        public void Platzierung_p1()
         { }
 
-        public void platzierung_p2()
+        public void Platzierung_p2()
         { }
 
-        public void positionscheck()
+        public void Positionscheck()
         { }
 
-        public void spielzug(int spieler)
+        public void Spielzug(int spieler)
         { }
 
-        public void siegesbedingung()
+        public void Siegesbedingung()
         { }
 
         #endregion

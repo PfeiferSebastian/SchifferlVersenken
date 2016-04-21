@@ -6,17 +6,33 @@ using System.Threading.Tasks;
 
 namespace SchifferlVersenken
 {
-    internal static class Spielfeld
+    internal class Spielfeld
     {
         //Arrays für die Spieler
 
+            //Arraycodes:
+
+            // Version 2:
+            //  Platzierung:
+            //   Null = Feld verfügbar
+            //   0    = Feld gesperrt
+            //   1-5  = Schiff
+
+            //  Spielfeld:
+            //   Null = Feld leer
+            //   0    = Wasser
+            //   1-5  = Schiff
+            //   2-10 = Treffer
+            
+            // Sieg bei Array-Summe von 34
+            
         //Spieler 1
         
-        static string [,,] P1Array = new string[10, 10, 2];
+        static int [,,] P1Array = new int [10, 10, 2];
 
         //Spieler 2
 
-        static string[,,] P2Array = new string[10, 10, 2];
+        static int [,,] P2Array = new int[10, 10, 2];
 
     }
 }
