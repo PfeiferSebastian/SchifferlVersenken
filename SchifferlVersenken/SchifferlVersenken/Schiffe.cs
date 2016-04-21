@@ -11,6 +11,6 @@ namespace SchifferlVersenken
 
     class Schiffe
     {
-
+         
     }
 }
