@@ -1,0 +1,25 @@
+﻿<Window x:Class="SchifferlVersenken.Positionierung"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchifferlVersenken"
+        mc:Ignorable="d"
+        Title="Positionierung" Height="900" Width="700">
+    <Grid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="500" Width="500" Margin="100,100,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label" Content="Platzierung Spieler 1" HorizontalAlignment="Left" Height="30" Width="200" Margin="250,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPlayername" Content="Playername:" HorizontalAlignment="Left" Height="30" Margin="31,40,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="txtBoxPlayername" HorizontalAlignment="Left" Height="30" Margin="140,40,0,0" TextWrapping="Wrap" Text="Spieler 1" VerticalAlignment="Top" Width="150"/>
+        <Label x:Name="lblSchiffstyp" Content="Schiffstyp:" HorizontalAlignment="Left" Margin="100,614,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cBoxSchiffstyp" HorizontalAlignment="Left" Height="30" Width="150" Margin="184,614,0,0" VerticalAlignment="Top" />
+        <Label x:Name="lblPlatzierungXAchse" Content="Startposition (A-J):" HorizontalAlignment="Left" Margin="100,669,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPlatzierungYAchse" Content="Startposition (0-9):" HorizontalAlignment="Left" Margin="100,706,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBoxStartPosXAchse" HorizontalAlignment="Left" Height="30" Margin="226,668,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
+        <TextBox x:Name="txtBoxStartPosYAchse" HorizontalAlignment="Left" Height="30" Margin="226,703,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
+        <Label x:Name="lblAusrichtung" Content="Ausrichtung:" HorizontalAlignment="Left" Height="30" Margin="270,668,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxAusrichtung" HorizontalAlignment="Left" Margin="365,668,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
+        <Button x:Name="btnPlatzieren" Content="Platzieren" HorizontalAlignment="Left" Height="30" Margin="525,750,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
