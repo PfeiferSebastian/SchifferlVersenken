@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchifferlVersenken
 {
-    public class GameLogic
+    static class GameLogic
     {
         //Arraycodes:
 
@@ -19,46 +19,41 @@ namespace SchifferlVersenken
 
         // Sieg bei Array-Summe von 34
 
-        Spielfeld sp = new Spielfeld();
-        string[,] attackcoordinates = null;
-
-
-        public void setNames()
-        {
-            Spieler sp = new Spieler();
-
-            Console.WriteLine("1. Spieler: ");
-            sp.P1Name = Convert.ToString(Console.ReadLine());
-            Console.WriteLine("2. Spieler: ");
-            sp.P2Name = Convert.ToString(Console.ReadLine());
-        }
-
         
-        public void attack()
+        static string[,] attackcoordinates = null;
+
+
+        static void setNames()
         {
-            int cx, cy;
 
-            Console.WriteLine("coordinate x:");
-            cx = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("coordinate y");
-            cy = Convert.ToInt32(Console.ReadLine());
-
-            attackcoordinates[cx, cy] = "X";
-
-            sp.setAttacksOnShips(attackcoordinates);
+            //Console.WriteLine("1. Spieler: ");
+            //Spieler.P1Name = Convert.ToString(Console.ReadLine());
+            //Console.WriteLine("2. Spieler: ");
+            //Spieler.P2Name = Convert.ToString(Console.ReadLine());
         }
 
-        public static void Spiel()
-        {
-            GameLogic gl = new GameLogic();
-            Spielfeld sp = new Spielfeld();
-            Schiffe sf = new Schiffe();
 
-            gl.setNames();
-            sp.clearsea();
-            sf.placeship();
-            gl.attack();
-            sp.drawsea();
+        static void attack()
+        {
+            //int cx, cy;
+
+            //Console.WriteLine("coordinate x:");
+            //cx = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("coordinate y");
+            //cy = Convert.ToInt32(Console.ReadLine());
+
+            //attackcoordinates[cx, cy] = "X";
+
+            //Spieler.setAttacksOnShips(attackcoordinates);
+        }
+
+        static void Spiel()
+        {
+            GameLogic.setNames();
+            Spielfeld.clearsea();
+            Schiffe.placeship();
+            GameLogic.attack();
+            Spielfeld.drawsea();
             Console.ReadLine();
         }
 

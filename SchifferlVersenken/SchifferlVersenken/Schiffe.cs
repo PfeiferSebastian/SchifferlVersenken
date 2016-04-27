@@ -9,17 +9,16 @@ namespace SchifferlVersenken
     // public enum Schiffklassen
     //{ Traeger, Schlachtschiff, Kreuzer, Uboot, Zerstoerer };
 
-    class Schiffe
+    static class Schiffe
     {
 
-        const int ship1 = 3, ship2 = 4, ship3 = 5;
-        Spielfeld sp = new Spielfeld();
-        string[,] ship = null;
+        static int ship1 = 3, ship2 = 4, ship3 = 5;
+        static string[,] ship = null;
 
         //Schiffplatzierung auf dem Wasser
-        public void placeship()
+        static public void placeship()
         {
-            sp.setshipsonSea(ship);
+            Spielfeld.setshipsonSea(ship);
 
             ship[1, 5] = Convert.ToString(ship1);
             ship[2, 5] = Convert.ToString(ship1);

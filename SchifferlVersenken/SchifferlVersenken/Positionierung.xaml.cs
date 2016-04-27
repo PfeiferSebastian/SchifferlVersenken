@@ -23,5 +23,10 @@ namespace SchifferlVersenken
         {
             InitializeComponent();
         }
+
+        private void btnPlatzieren_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

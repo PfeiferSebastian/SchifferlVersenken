@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace SchifferlVersenken
 {
-    class Spielfeld
+    static class Spielfeld
     {
-        const int seasize = 10;
-        string[,] sea = new string[seasize, seasize];
-        
+        static int seasize = 10;
+        static string[,] sea = new string[seasize, seasize];
+
 
         //Methode erstellt den See
-        public void clearsea()
+        static public void clearsea()
         {
             for (int x = 0; x < 10; x++)
             {
@@ -25,7 +25,7 @@ namespace SchifferlVersenken
         }
 
         //Mehtode zeichnet den See auf der Console
-        public void drawsea()
+        static public void drawsea()
         {
             for (int x = 0; x < 10; x++)
             {
@@ -39,13 +39,13 @@ namespace SchifferlVersenken
         }
 
         //Methode um die Schiffe auf dem Sea zu positionieren über Parameter
-        public void setshipsonSea(string[,] sea)
+        static public void setshipsonSea(string[,] sea)
         {
-            this.sea = sea;
+            Speilfeld.sea = sea;
         }
 
         //Methode übergibt Koordinaten der Angriffe an den Array
-        public void setAttacksOnShips(string[,] attack)
+        static public void setAttacksOnShips(string[,] attack)
         {
             this.sea = attack;
         }
