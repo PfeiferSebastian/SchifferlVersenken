@@ -6,33 +6,48 @@ using System.Threading.Tasks;
 
 namespace SchifferlVersenken
 {
-    internal class Spielfeld
+    class Spielfeld
     {
-        //Arrays für die Spieler
-
-            //Arraycodes:
-
-            // Version 2:
-            //  Platzierung:
-            //   Null = Feld verfügbar
-            //   0    = Feld gesperrt
-            //   1-5  = Schiff
-
-            //  Spielfeld:
-            //   Null = Feld leer
-            //   0    = Wasser
-            //   1-5  = Schiff
-            //   2-10 = Treffer
-            
-            // Sieg bei Array-Summe von 34
-            
-        //Spieler 1
+        const int seasize = 10;
+        string[,] sea = new string[seasize, seasize];
         
-        static int [,,] P1Array = new int [10, 10, 2];
 
-        //Spieler 2
+        //Methode erstellt den See
+        public void clearsea()
+        {
+            for (int x = 0; x < 10; x++)
+            {
+                for (int y = 0; y < 10; y++)
+                {
+                    sea[x, y] = "~";
+                }
+            }
+        }
 
-        static int [,,] P2Array = new int[10, 10, 2];
+        //Mehtode zeichnet den See auf der Console
+        public void drawsea()
+        {
+            for (int x = 0; x < 10; x++)
+            {
+                for (int y = 0; y < 10; y++)
+                {
+                    Console.Write(" ");
+                    Console.Write(sea[x, y]);
+                }
+                Console.WriteLine(" ");
+            }
+        }
 
+        //Methode um die Schiffe auf dem Sea zu positionieren über Parameter
+        public void setshipsonSea(string[,] sea)
+        {
+            this.sea = sea;
+        }
+
+        //Methode übergibt Koordinaten der Angriffe an den Array
+        public void setAttacksOnShips(string[,] attack)
+        {
+            this.sea = attack;
+        }
     }
 }

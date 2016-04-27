@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchifferlVersenken
 {
-    internal class Spieler
+    public class Spieler
     {
         #region Felder & Eigenschaften
         //Spieler
